@@ -1,0 +1,15 @@
+{
+  "name": "cse-motors",
+  "version": "1.0.0",
+  "description": "CSE 340 Assignment 1 - CSE Motors Car Dealership",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Ayaa Daphine",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}

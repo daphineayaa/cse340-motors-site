@@ -1,0 +1,208 @@
+/* ---------- Global Styles ---------- */
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Header & Navigation ---------- */
+header {
+  background: linear-gradient(90deg, #0d47a1, #1565c0);
+  color: #ffffff;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #1976d2;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0.8rem 0;
+}
+
+nav a {
+  color: #f5f5f5;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #e0e0e0;
+  color: #0d47a1;
+}
+
+/* ---------- Banner Section ---------- */
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(85%);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  background: rgba(13, 71, 161, 0.7);
+  padding: 1.8rem 3rem;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner-text .button {
+  background: #e0e0e0;
+  color: #0d47a1;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.banner-text .button:hover {
+  background: #1565c0;
+  color: #ffffff;
+}
+
+/* ---------- Cars Section ---------- */
+.cars {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #ffffff;
+}
+
+.cars h2 {
+  color: #0d47a1;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Car images in one horizontal line facing each other */
+.car-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.car {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Make the second car image face left */
+.car:nth-child(2) img {
+  transform: scaleX(-1);
+}
+
+.car img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(21, 101, 192, 0.4);
+}
+
+/* Keep mirrored image facing properly when hovered */
+.car:nth-child(2) img:hover {
+  transform: scaleX(-1) scale(1.05);
+}
+
+.car h3 {
+  margin-top: 1rem;
+  color: #0d47a1;
+  font-size: 1.3rem;
+}
+
+.car .button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #1565c0;
+  color: #ffffff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.car .button:hover {
+  background: #0d47a1;
+  box-shadow: 0 4px 10px rgba(13, 71, 161, 0.3);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #0d47a1;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* ---------- Media Queries ---------- */
+@media (max-width: 768px) {
+  .car-list {
+    flex-direction: column;
+  }
+
+  .car:nth-child(2) img {
+    transform: none;
+  }
+}

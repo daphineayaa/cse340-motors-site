@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('shared/head') %>
+<body>
+  <!-- Header -->
+  <%- include('shared/header') %>
+
+  <!-- Navigation -->
+  <%- include('shared/navigation') %>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Banner Section -->
+    <section class="banner">
+      <img src="/images/car_banner.jpg" alt="CSE Motors Banner">
+      <div class="banner-text">
+        <h1>Welcome to CSE Motors!</h1>
+        <a href="#cars" class="button">View Cars</a>
+      </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section id="cars" class="cars">
+      <h2>Our Featured Cars</h2>
+      <div class="car-list">
+        <div class="car">
+          <img src="/images/car1.webp" alt="Car 1">
+          <h3>Car Model 1</h3>
+          <a href="#" class="button">View Details</a>
+        </div>
+        <div class="car">
+          <img src="/images/car2.webp" alt="Car 2">
+          <h3>Car Model 2</h3>
+          <a href="#" class="button">View Details</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <%- include('shared/footer') %>
+</body>
+</html>
