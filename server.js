@@ -1,3 +1,4 @@
+const baseController = require("./controllers/baseController")
 const path = require('path');
 const express = require('express');
 const env = require('dotenv').config(); // keep this if you have a .env
@@ -14,10 +15,10 @@ app.use(express.json());
 // Keep your existing static routes (preserves current repo behavior)
 app.use(staticRoutes);
 // Index route (home view) - IMPORTANT for rubric (delivers dynamic home view)
-app.get('/', (req, res) => {
+// Index route
+app.get("/", baseController.buildHome);
   // render views/index.ejs — create this file if it doesn't exist
   res.render('index', { title: 'W01 Site - Home' });
-});
 // Health check (useful for Render or other hosts)
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
